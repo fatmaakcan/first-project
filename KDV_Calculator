@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class Kdv {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("KDV'siz fiyat= ");
+        double fiyat = input.nextDouble();
+
+        double kdvOrani = fiyat <= 1000 ? 0.18 : 0.08;
+        double kdvTutari = fiyat * kdvOrani;
+        System.out.println("KDV turari= " + kdvTutari);
+
+        double islem = (fiyat + kdvTutari);
+        System.out.println("KDV'li fiyat= " + islem);
+
+    }
+}
