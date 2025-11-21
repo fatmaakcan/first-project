@@ -1,0 +1,53 @@
+
+import java.util.Scanner;
+
+public class PassGrade {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Matematik notunuzu giriniz:");
+        double mat = input.nextInt();
+        System.out.print("Fizik notunuz girin:");
+        double fiz = input.nextInt();
+        System.out.print("Turkce notunuzu giriniz:");
+        double turk = input.nextInt();
+        System.out.print("Kimya notunuzu giriniz:");
+        double kim = input.nextInt();
+        System.out.print("Muzik notunuzu giriniz:");
+        double muz = input.nextInt();
+
+        double total = 0;
+        int count = 0;
+
+        if (mat >= 0 && mat <= 100) {
+            total += mat;
+            count++;
+        }
+        if (fiz >= 0 && fiz <= 100) {
+            total += fiz;
+            count++;
+        }
+        if (turk >= 0 && turk <= 100) {
+            total += turk;
+            count++;
+        }
+        if (kim >= 0 && kim <= 100) {
+            total += kim;
+            count++;
+        }
+
+        if (muz >= 0 && muz <= 100) {
+            total += muz;
+            count++;
+        }
+
+        double average = total / count;
+        System.out.println("Ortalamaniz: " + average);
+        if (average > 55) {
+            System.out.println("Sinifi gectiniz!");
+        } else {
+            System.out.println("Kaldiniz :( ");
+        }
+
+    }
+}
