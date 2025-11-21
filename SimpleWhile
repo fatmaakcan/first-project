@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class ExampleLoop2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int sum = 0;
+        while (true) {
+            System.out.print("Bir sayi girin:");
+            int sayi = input.nextInt();
+
+            if (sayi % 2 != 0) {
+                break;
+            }
+            if (sayi % 4 == 0) {
+                sum += sayi;
+            }
+        }
+        System.out.println("Toplam= " + sum);
+
+    }
+}
